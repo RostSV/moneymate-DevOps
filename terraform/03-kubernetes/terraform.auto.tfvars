@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# Secrets 
+# -----------------------------------------------------------------------------
+
+# Standarne sa nacitavaju z Terraform cloud
+
+# Azure account subscription ID (Required)
+subscription_id = "e2122dea-7bde-4eaf-af94-4053ee173e30"
+
+# Provide your tenant ID (Required)
+tenant_id = ""
+
+# Azure Client ID (Required)
+client_id = ""
+
+# Azure Client secret (Required)
+client_secret = ""
+
+# Service principal pre K8S cluster
+
+# -----------------------------------------------------------------------------
+# Global
+# -----------------------------------------------------------------------------
+
+location = "northeurope"
+
+environment = "lab"
+
+resource_group = "fsa2024-rsvistula"
+
+# -----------------------------------------------------------------------------
+# Resource Specific Variables
+# -----------------------------------------------------------------------------
+
+resource_name = "fsa2024-rsvistula"
+
+dns_prefix = "fsa2024-rsvistula"
+
+nodepool_name = "app"
+
+node_count = "2"
+
+vm_size = "Standard_B2s"
+
+os_disk_size = "30"
