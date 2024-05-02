@@ -13,13 +13,13 @@ spec:
   - http:
       paths:
     #TODO - pridat cesty pre BE
-      - path: /
+      - path: /api/v1/accounts
         pathType: Prefix
         backend:
           service:
-            name: fsa-fe
+            name: fsa-be
             port:
-              number: 80
+              number: 8080
       - path: /api/v1/currencies
         pathType: Prefix
         backend:
@@ -27,10 +27,32 @@ spec:
             name: fsa-be
             port:
               number: 8080
+      - path: /api/v1/categories
+        pathType: Prefix
+        backend:
+          service:
+            name: fsa-be
+            port:
+              number: 8080
+      - path: /api/v1/users
+        pathType: Prefix
+        backend:
+          service:
+            name: fsa-be
+            port:
+              number: 8080
+
       - path: /auth
         pathType: Prefix
         backend:
           service:
             name: fsa-keycloak-http
+            port:
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fsa-fe
             port:
               number: 80

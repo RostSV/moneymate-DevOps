@@ -51,7 +51,7 @@ spec:
               cpu: 500m
               memory: 500Mi
             requests:
-              cpu: 100m
+              cpu: 101m
               memory: 250Mi
           ports:
             - name: http
